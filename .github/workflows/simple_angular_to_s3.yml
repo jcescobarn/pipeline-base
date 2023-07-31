@@ -31,7 +31,8 @@ jobs:
               with:
                 node-version: ${{ inputs.node_version }} 
                 cache: 'npm'
-            
+            - name: view path
+              run: ls
             - name: install dependencies
               run: npm ci
 
