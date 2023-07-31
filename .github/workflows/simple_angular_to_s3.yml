@@ -26,13 +26,14 @@ jobs:
                 aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
                 aws-region: us-east-1  
 
+            - name: view path 
+              run: ls
+
             - name: setup node
               uses: actions/setup-node@v3
               with:
                 node-version: ${{ inputs.node_version }} 
-                cache: 'npm'
-            - name: view path
-              run: ls
+
             - name: install dependencies
               run: npm ci
 
